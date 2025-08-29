@@ -1,0 +1,89 @@
+/* Definisi Warna dan Font */
+:root {
+  --color-dark-bg: #1a1a2e; /* Latar Belakang Gelap */
+  --color-main-text: #e0e0e0; /* Teks Utama */
+  --color-neon-blue: #00ffff; /* Neon Biru */
+  --color-neon-pink: #ff007f; /* Neon Merah Muda */
+  --color-neon-green: #00ff00; /* Neon Hijau */
+  --font-cyber: 'Fugaz One', sans-serif;
+}
+
+/* Animasi untuk Efek Berkedip */
+@keyframes neon-glow {
+  0%, 100% { text-shadow: 0 0 5px var(--color-neon-blue), 0 0 15px var(--color-neon-blue); }
+  50% { text-shadow: 0 0 10px var(--color-neon-blue), 0 0 20px var(--color-neon-blue), 0 0 30px var(--color-neon-blue); }
+}
+
+/* Tampilan Dasar */
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-main-text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Latar Belakang Futuristik */
+.main-outer, .footer-outer {
+  background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(10,10,20,0.9));
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header dan Judul Postingan */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cyber);
+  color: var(--color-neon-pink);
+  text-shadow: 0 0 5px var(--color-neon-pink);
+}
+
+h1.post-title a, h2.post-title a {
+  font-size: 28px;
+  text-decoration: none;
+  color: var(--color-neon-blue);
+  animation: neon-glow 2s infinite alternate; /* Menerapkan efek animasi */
+}
+
+h1.post-title a:hover, h2.post-title a:hover {
+  color: var(--color-neon-pink);
+  animation: none; /* Menonaktifkan animasi saat di-hover */
+  text-shadow: 0 0 10px var(--color-neon-pink), 0 0 20px var(--color-neon-pink);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Link */
+a {
+  color: var(--color-neon-green);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-neon-blue);
+  text-shadow: 0 0 5px var(--color-neon-blue);
+}
+
+/* Kontainer Postingan */
+.post-body {
+  background-color: rgba(26, 26, 46, 0.8);
+  border: 1px solid var(--color-neon-blue);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.post-body:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px var(--color-neon-blue), 0 0 25px var(--color-neon-pink);
+}
+
+/* Footer */
+.footer-outer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  color: var(--color-main-text);
+  border-top: 2px dashed var(--color-neon-green);
+}
+
