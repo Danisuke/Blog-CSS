@@ -30,6 +30,14 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.main-outer {
+  background-image: url('https://unsplash.com/photos/a-futuristic-city-at-night-with-neon-lights-FXJTvGrqevg');
+  background-size: cover;
+  background-attachment: fixed;
+  /* ... properti lain ... */
+}
+
+
 /* Header dan Judul Postingan */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-cyber);
